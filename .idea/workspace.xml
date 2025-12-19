@@ -4,18 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec481a5a-594f-4298-af70-ccea80fda50a" name="Changes" comment="" />
+    <list default="true" id="ec481a5a-594f-4298-af70-ccea80fda50a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/vite.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/controllers/authController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/middleware/upload.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/User.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/routes/authRoutes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="tsconfig.json" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="366lmtVakflpSPCKQtboi4hoFJp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,13 +55,14 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/home/glotr/WebstormProjects/auth/junior/front/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28238.10" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28539.21" />
       </set>
     </attachedChunks>
   </component>
@@ -50,7 +73,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1764335064037</updated>
-      <workItem from="1764335065290" duration="1314000" />
+      <workItem from="1764335065290" duration="1875000" />
+      <workItem from="1764572768611" duration="8499000" />
+      <workItem from="1764650584158" duration="8405000" />
+      <workItem from="1764753939555" duration="7212000" />
+      <workItem from="1764830719236" duration="4934000" />
+      <workItem from="1765453085849" duration="5887000" />
+      <workItem from="1765974342501" duration="2973000" />
+      <workItem from="1766034117114" duration="11449000" />
+      <workItem from="1766118684192" duration="572000" />
     </task>
     <servers />
   </component>
