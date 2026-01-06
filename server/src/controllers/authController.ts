@@ -58,13 +58,13 @@ export const login = async (req: Request, res: Response) => {
     //     Find User
         const user = await User.findOne({ login });
         if(!user) {
-            return res.status(400).json({ message: 'Invalid credentials' })
+            return res.status(400).json({ message: 'Invalid credentials' });
         }
 
     //     Check password
         const isMatch = await bcrypt.compare(password, user.password);
         if(!isMatch) {
-            return res.status(400).json({ message: 'Invalid credentials' })
+            return res.status(400).json({ message: 'Invalid credentials' });
         }
 
     //     Generate token

@@ -1,5 +1,10 @@
 import multer from 'multer';
 import path from 'path';
+import fs from 'fs';
+
+const uploadDir = path.resolve(process.cwd(), 'uploads');
+
+fs.mkdirSync(uploadDir, { recursive: true });
 
 // Simple file storage configuration
 const storage = multer.diskStorage({

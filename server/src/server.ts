@@ -15,7 +15,7 @@ app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
 // Routes
-app.use('/app/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 
 const uri: string | undefined = process.env.MONGODB_URI;
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 5000;

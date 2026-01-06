@@ -5,18 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec481a5a-594f-4298-af70-ccea80fda50a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/vite.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/controllers/authController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/middleware/upload.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/models/User.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/routes/authRoutes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/components/LoginForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/services/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/stores/auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/types/auth.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/RegisterForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/RegisterForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/router/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/Dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/authController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/authController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/middleware/upload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/middleware/upload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/server.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +30,9 @@
       <list>
         <option value="package.json" />
         <option value="tsconfig.json" />
+        <option value="CSS File" />
         <option value="TypeScript File" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -39,30 +43,58 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="366lmtVakflpSPCKQtboi4hoFJp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/home/glotr/WebstormProjects/auth/junior/front/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.localhost:3000.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/glotr/WebstormProjects/auth/junior&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/glotr/WebstormProjects/auth/junior/front/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/front" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="localhost:3000" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.localhost:3000" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28539.21" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.29346.143" />
       </set>
     </attachedChunks>
   </component>
@@ -81,11 +113,27 @@
       <workItem from="1765453085849" duration="5887000" />
       <workItem from="1765974342501" duration="2973000" />
       <workItem from="1766034117114" duration="11449000" />
-      <workItem from="1766118684192" duration="572000" />
+      <workItem from="1766118684192" duration="14475000" />
+      <workItem from="1766469715299" duration="10902000" />
+      <workItem from="1766551569350" duration="5177000" />
+      <workItem from="1766663222380" duration="3004000" />
+      <workItem from="1766724297464" duration="606000" />
+      <workItem from="1767611704594" duration="5580000" />
+      <workItem from="1767674433896" duration="5827000" />
+      <workItem from="1767682342463" duration="199000" />
+      <workItem from="1767682553262" duration="15670000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

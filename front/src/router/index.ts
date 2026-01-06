@@ -10,7 +10,7 @@ router.beforeEach((to, _, next) => {
     const token = localStorage.getItem('junior-token');
 
     if(to.meta.requiresAuth && !token) {
-        next('/register');
+        next('/login');
     } else {
         next();
     }

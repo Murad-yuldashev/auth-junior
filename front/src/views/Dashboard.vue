@@ -1,12 +1,21 @@
 <script setup lang="ts">
+import {useAuthStore} from "../stores/auth.ts";
+import {useRouter} from "vue-router";
 
+const authStore = useAuthStore();
+const router = useRouter();
+
+const handleLogout = () => {
+  authStore.logout();
+  router.push("/login");
+};
 </script>
 
 <template>
   <section class="dashboard">
-    <h1>Welcome {Name User}</h1>
+    <h1>Welcome {{ authStore?.user?.username }}</h1>
     <p>You have successfully registered and logged in.</p>
-    <button>Logout</button>
+    <button @click="handleLogout">Logout</button>
   </section>
 </template>
 
