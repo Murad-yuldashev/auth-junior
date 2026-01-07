@@ -1,7 +1,7 @@
 export const routes = [
     {
         path: '/',
-        redirect: '/register'
+        redirect: '/login'
     },
     {
         path: '/register',

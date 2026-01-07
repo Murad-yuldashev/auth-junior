@@ -1,4 +1,65 @@
 <script setup lang="ts">
+import {reactive} from "vue";
+import {useAuthStore} from "../stores/auth.ts";
+import {LoginData} from "../types/auth.ts";
+import {useRouter} from "vue-router";
+
+const authStore = useAuthStore();
+const router = useRouter();
+
+const formData = reactive({
+  login: '',
+  password: ''
+});
+
+// Validation errors
+const errors = reactive({
+  login: '',
+  password: ''
+})
+
+// Validation function
+function validateForm(): boolean {
+  //   Reset errors
+  errors.login = '';
+  errors.password = '';
+
+  let isValid = true;
+
+  // Login validation
+  if (formData.login.length < 3) {
+    errors.login = 'Login is required';
+    isValid = false;
+  }
+
+  // Password validation
+  if (formData.password.length < 6) {
+    errors.password = 'Password must be at least 6 characters';
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+async function handleLogin() {
+  console.log('Login form loaded', !validateForm());
+  if (!validateForm()) {
+    return;
+  }
+
+  const data: LoginData = {
+    login: formData.login,
+    password: formData.password,
+  }
+
+  try {
+    await authStore.login(data);
+    await router.push('/dashboard')
+  } catch (error) {
+    console.error('Login Error:', error)
+  }
+
+}
 
 </script>
 
@@ -6,12 +67,14 @@
   <section class="register-form">
     <h2>Login page</h2>
 
-    <form>
+    <form @submit.prevent="handleLogin">
       <!--  Login -->
       <div class="form-group">
         <label for="login">Login *</label>
         <input
             id="login"
+            required
+            v-model="formData.login"
             placeholder="Login"
             type="text"
         >
@@ -22,6 +85,8 @@
         <label for="password">Password *</label>
         <input
             id="password"
+            required
+            v-model="formData.password"
             placeholder="Password"
             type="password"
         >
@@ -30,6 +95,11 @@
       <router-link to="/register" class="link-register">Go to Register</router-link>
       
       <button type="submit">Login</button>
+
+<!--      Error message-->
+      <div v-if="authStore.error" class="error-message">
+        {{ authStore.error }}
+      </div>
     </form>
   </section>
 </template>
